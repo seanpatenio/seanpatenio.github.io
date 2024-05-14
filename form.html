@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Summative Assessment 1 form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;  
+        }
+
+
+        .container {
+            background-color: #282b30;
+            border: 4px solid green;
+            color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-inputs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-inputs input, textarea {
+            align-items: center;
+            margin: 15px 0px;
+            padding: 15px 10px;
+            border-radius: 100px;
+            border: 4px solid green;
+            font-weight: 700;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border: none;
+            margin-top: 15px;
+            padding: 10px 50px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Form</h3>
+        <div class="form-inputs">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-inputs">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your email">
+        </div>
+        <div class="form-inputs">
+            <label for="contact">Contact</label>
+            <input type="text" name="contact" placeholder="Enter your contact no.">
+        </div>
+        <div class="form-inputs">
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Enter your message" style="font-family: Arial, Helvetica, sans-serif;"></textarea>
+        </div>
+        <button>
+            Submit
+        </button>
+    </div>
+    
+</body>
+</html>
