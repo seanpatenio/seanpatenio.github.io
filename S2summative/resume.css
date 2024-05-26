@@ -1,0 +1,91 @@
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    width: 30%;
+    color: white;
+}
+
+.sidebar .profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.info, .skills, .education{
+    width: 100%;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.info-details, .skills-details {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.skills-details {
+    justify-content: center;
+}
+
+.info-details img, .skills-details img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 70%;
+    background-color: white;
+}
+
+.main-content .name {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.main-content .course {
+    font-size: 30px;
+    color: rgb(81, 81, 81);
+}
+
+.main-content .introduction {
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.education-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
