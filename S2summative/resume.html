@@ -1,240 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean Pateio</title>
-    <style>
-        body {
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.main {
-    display: flex;
-    width: 60%;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    padding: 20px;
-    width: 30%;
-    color: white;
-}
-
-.sidebar .profile img {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.info, .skills, .education{
-    width: 100%;
-    margin-top: 20px;
-}
-
-h1 {
-    font-size: 14px;
-}
-
-h2 {
-    text-align: center;
-    border-bottom: 2px solid white;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.info-details, .skills-details {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.skills-details {
-    justify-content: center;
-}
-
-.info-details img, .skills-details img {
-    margin-right: 10px;
-    width: 20px;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    background-color: white;
-}
-
-.main-content .content {
-    padding: 20px;
-}
-
-.main-content .name {
-    font-size: 70px;
-    margin-top: 30px;
-    width: 80%;
-    padding: 0px 20px;
-    border-top-right-radius: 70px;
-    border-bottom-right-radius: 70px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
-
-.main-content .course {
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    margin-top: 10px;
-}
-
-.main-content .introduction {
-    line-height: 1.5;
-    margin-top: 20px;
-}
-
-.education-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.projects-row {
-    display: flex;
-    align-items: center;
-}
-
-.project-description {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.project-description a{
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-radius: 24px;
-    width: 100%;
-    padding: 10px 0px;
-}
-
-
-
-    </style>
+    <title>Sean Patenio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="main">
-        <div class="sidebar">
-            <div class="profile">
-                <img src="profile.png" alt="profile pic">
+    <div class="container-fluid d-flex flex-wrap justify-content-center mt-4">
+        <div class="col-md-4 bg-dark text-white p-4">
+            <div class="text-center mb-4">
+                <img src="profile.png" class="rounded-circle" alt="profile pic" style="width: 150px;">
             </div>
-            <div class="info">
-                <h2>INFO</h2>
-                <div class="info-details">
-                    <img src="/S2summative/contact.png" alt="contact">
+            <div class="mb-4">
+                <h2 class="border-bottom pb-2">INFO</h2>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="/S2summative/contact.png" alt="contact" style="width: 20px; margin-right: 10px;">
                     0967-0541-755
                 </div>
-                <div class="info-details">
-                    <img src="/S2summative/email.png" alt="email">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="/S2summative/email.png" alt="email" style="width: 20px; margin-right: 10px;">
                     Seanjosephpatenio@gmail.com
                 </div>
-                <div class="info-details">
-                    <img src="/S2summative/address.png" alt="address">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="/S2summative/address.png" alt="address" style="width: 20px; margin-right: 10px;">
                     2282 Bicoleyte St. CommonWealth Q.C
                 </div>
-                <div class="info-details">
-                    <img src="/S2summative/github.png" alt="github">
+                <div class="d-flex align-items-center">
+                    <img src="/S2summative/github.png" alt="github" style="width: 20px; margin-right: 10px;">
                     Seanpatenio
                 </div>
-            </div>  
-            <div class="skills">
-                <h2>SKILLS</h2>
-                <div class="skills-details">
-                    HTML
-                </div>
-                <div class="skills-details">
-                    CSS
-                </div>
-                <div class="skills-details">
-                    C++
-                </div>
-                <div class="skills-details">
-                    Figma
-                </div>
-                <div class="skills-details">
-                    Photoshop
-                </div>
-                <div class="skills-details">
-                    Problem Solving
-                </div>
             </div>
-            <div class="education">
-                <h2>EDUCATION</h2>
-                <div class="education-details">
-                    <h1>SECONDARY EDUCATION</h1>
-                    <p>Technological Institute of the Philippines</p>
+            <div class="mb-4">
+                <h2 class="border-bottom pb-2">SKILLS</h2>
+                <div class="mb-2">HTML</div>
+                <div class="mb-2">CSS</div>
+                <div class="mb-2">C++</div>
+                <div class="mb-2">Figma</div>
+                <div class="mb-2">Photoshop</div>
+                <div>Problem Solving</div>
+            </div>
+            <div>
+                <h2 class="border-bottom pb-2">EDUCATION</h2>
+                <div class="mb-4">
+                    <h5>SECONDARY EDUCATION</h5>
+                    <p class="mb-1">Technological Institute of the Philippines</p>
                     <p>2021-2023</p>
                 </div>
-                <div class="education-details">
-                    <h1>POST-SECONDARY EDUCATION</h1>
-                    <p>FEU Institute of Technology</p>
+                <div>
+                    <h5>POST-SECONDARY EDUCATION</h5>
+                    <p class="mb-1">FEU Institute of Technology</p>
                     <p>2023-Current</p>
                 </div>
             </div>
         </div>
-        <div class="main-content">
-            <div class="name">Sean <br> Patenio
-                <p class="course">BSIT CST</p>
+        <div class="col-md-8 bg-white p-4">
+            <div class="bg-dark text-white rounded-right px-4 py-3 mb-4">
+                <h1 class="display-4 mb-0">Sean Patenio</h1>
+                <p class="lead">BSIT CST</p>
             </div>
-            <div class="content">
-            <h2>ABOUT ME</h2>
-            <p class="introduction">I am a 19-year-old student currently pursuing a Bachelor of Science in Information Technology, specializing in Cyber Security, 
-                at the FEU Institute of Technology. As a dedicated and driven individual, I am passionate about protecting digital assets and ensuring the integrity and confidentiality of information systems. 
-                My education has provided me with a strong foundation in cybersecurity principles, tools, and techniques. I am eager to apply my skills and knowledge in a professional setting, contributing to innovative projects and gaining valuable industry experience.
-            </p>
-            <div class="projects">
+            <div>
+                <h2>ABOUT ME</h2>
+                <p>I am a 19-year-old student currently pursuing a Bachelor of Science in Information Technology, specializing in Cyber Security, at the FEU Institute of Technology. As a dedicated and driven individual, I am passionate about protecting digital assets and ensuring the integrity and confidentiality of information systems. My education has provided me with a strong foundation in cybersecurity principles, tools, and techniques. I am eager to apply my skills and knowledge in a professional setting, contributing to innovative projects and gaining valuable industry experience.</p>
+            </div>
+            <div>
                 <h2>PROJECTS</h2>
-                <div class="projects-row">
-                    <div class="project-description">
-                        <p>Developed a table using fundamental <br>
-                        HTML for structure and CSS for styling. </p>
-                        <a href="https://seanpatenio.github.io/table.html" target="_blank">Click Here</a>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="border p-3">
+                            <p>Developed a table using fundamental HTML for structure and CSS for styling.</p>
+                            <a href="https://seanpatenio.github.io/table.html" class="btn btn-dark btn-block" target="_blank">Click Here</a>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <p>Developed a registration form utilizing basic HTML for structure and CSS for styling. </p>
-                        <a href="https://seanpatenio.github.io/form.html" target="_blank">Click Here</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="border p-3">
+                            <p>Developed a registration form utilizing basic HTML for structure and CSS for styling.</p>
+                            <a href="https://seanpatenio.github.io/form.html" class="btn btn-dark btn-block" target="_blank">Click Here</a>
+                        </div>
                     </div>
-                </div>
-                <div class="projects-row">
-                    <div class="project-description">
-                        <p>Developed a responsive registration form using basic HTML for structure and Bootstrap for styling.</p>
-                        <a href="https://seanpatenio.github.io/Formative%203/registration.html" target="_blank">Click Here</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="border p-3">
+                            <p>Developed a responsive registration form using basic HTML for structure and Bootstrap for styling.</p>
+                            <a href="https://seanpatenio.github.io/Formative%203/registration.html" class="btn btn-dark btn-block" target="_blank">Click Here</a>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <p>Developed a responsive resume using basic HTML for structure and Bootstrap for styling.</p>
-                        <a href="http://127.0.0.1:5500/S2summative/resume.html" target="_blank">Click Here</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="border p-3">
+                            <p>Developed a responsive resume using basic HTML for structure and Bootstrap for styling.</p>
+                            <a href="http://127.0.0.1:5500/S2summative/resume.html" class="btn btn-dark btn-block" target="_blank">Click Here</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-            
-            
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
