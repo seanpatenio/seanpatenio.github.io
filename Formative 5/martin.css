@@ -1,0 +1,190 @@
+
+
+body {
+    font-family: "Titillium Web", sans-serif;
+    padding: 0px;
+    margin: 0;
+}
+
+@media (min-width: 100px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .upper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: pink;
+        color: white;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .profile {
+        margin-right: 20px;
+    }
+
+    .profile img {
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    .nicknames {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .nicknames p {
+        margin-right: 10px;
+        background-color: lightpink;
+        padding: 10px;
+        border-radius: 20px
+    }
+
+    .nicknames h1 {
+        background-color: lightpink;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    .nns {
+        display: flex;
+        align-items: center;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about p {
+        background-color: lightpink;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .about h1 {
+        background-color: lightpink;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills h1 {
+        background-color: lightpink;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    .skills p {
+        margin-right: 20px;
+        font-weight: bold;
+    }
+
+    .skills-des-html {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills-des-html .skills-nocolor {
+        width: 100px;
+        background-color: rgb(73, 73, 73);
+    }
+
+    .skills-des-html .skills-wcolor {
+        width: 40%;
+        background-color: lightpink;
+    }
+
+    .skills-des-css {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills-des-css .skills-nocolor {
+        width: 100px;
+        background-color: rgb(73, 73, 73);
+    }
+
+    .skills-des-css .skills-wcolor {
+        width: 30%;
+        background-color: lightpink;
+    }
+
+    .skills-des-cplus {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills-des-cplus .skills-nocolor {
+        width: 100px;
+        background-color: rgb(73, 73, 73);
+    }
+
+    .skills-des-cplus .skills-wcolor {
+        width: 40%;
+        background-color: lightpink;
+    }
+ 
+}
+
+@media (min-width: 400px) {
+    .nicknames {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .nns {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .skills-des {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-des-css, .skills-des-html {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 600px) {
+    .skills-des {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 100px;
+    }
+
+}
