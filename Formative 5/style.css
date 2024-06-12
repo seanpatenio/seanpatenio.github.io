@@ -63,6 +63,10 @@ body {
     gap: 20px;
 }
 
+.cards a {
+    text-decoration: none;
+}
+
 .cards .thumbnail {
     background-color: rgb(0, 0, 0);
     color: white;
