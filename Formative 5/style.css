@@ -1,88 +1,142 @@
 body {
-    font-family: "Titillium Web", sans-serif;
-    background-color: #282b30fb;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-@media  (min-width: 100px) {
-   .header {
+.main {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #282b30fb;
-    background-color: white;
-    border-radius: 40px;
-    position: static;
-   }
-
-   .main p, h2 {
-    margin-bottom: 50px;
-    color: white;
-   }
-
-   .friends {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-   }
-
-   .friends a {
-    display: flex;
-    width: 100%;
-    text-decoration: none;
-   }
-
-   .thumbnail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #282b30fb;
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    height: 300px;
-    width: 100%;
-    margin-bottom: 20px;
-   }
-
-   .thumbnail img {
-    height: 50%;
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid #282b30fb;
-    object-fit: cover;
-   }  
-
-   .thumbnail p {
-    background-color: #282b30fb;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 3px;
-   }
-
-   .thumbnail h2 {
-    color: #282b30fb;
-    font-size: 1.2em;
-   }
+    text-align: center;
 }
 
-@media (min-width: 700px) {
-    .friends {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
+.introduction {
+    max-width: 800px;
+}
+
+.introduction h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.introduction a {
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.introduction a:hover {
+    background-color: rgb(53, 149, 21);
+    color: white;
+}
+
+.sub {
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards .thumbnail {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 230px;
+    text-align: center;
+    transition: 0.15s;
+}
+
+.cards .thumbnail:hover {
+    background-color: rgb(53, 149, 21);
+}
+
+.cards .thumbnail-img img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cards .thumbnail-title {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+    .introduction h1 {
+        font-size: 3rem;
     }
 
-    .thumbnail {
-        margin-right: 10px;
-        height: 400px;
+    .introduction p {
+        font-size: 1.25rem;
     }
 
-    .main p {
-        margin-bottom: 50px;
-        color: white;
-        font-size: 18px;
-       }
+    .introduction a {
+        font-size: 1.25rem;
+        padding: 15px 30px;
+    }
+
+    .cards .thumbnail {
+        max-width: 300px;
+    }
+
+    .cards .thumbnail-img img {
+        height: 200px;
+    }
+}
+
+@media (min-width: 900px) {
+    .main, .sub {
+        padding: 40px;
+    }
+
+    .introduction h1 {
+        font-size: 3.5rem;
+    }
+
+    .introduction p {
+        font-size: 1.5rem;
+    }
+
+    .introduction a {
+        font-size: 1.5rem;
+        padding: 20px 40px;
+    }
+
+    .cards {
+        gap: 40px;
+    }
+
+    .cards .thumbnail {
+        max-width: 350px;
+    }
+
+    .cards .thumbnail-img img {
+        height: 250px;
+    }
 }
