@@ -1,0 +1,187 @@
+@media (min-width: 300px) {
+    body {
+        padding: 0px;
+        margin: 20px;
+        font-family: "Dosis", sans-serif;    
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10%;
+        width: 100%;
+        background-color: rgb(249, 215, 220);
+        margin-bottom: 20px;
+        border-radius: 50px;
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 40px;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgba(246, 232, 240, 0.734);
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(249, 215, 220);
+        padding: 10px 0px;
+        border-radius: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .title img {
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .hobbies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        background-color: rgba(246, 232, 240, 0.734);
+    }
+
+    .hobby {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px 10px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .hobby-des {
+        font-size: 18px;
+    }
+
+    .hobby .hobby-pic img {
+        width: 50px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: #d34ccc8d;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(246, 232, 240, 0.734);
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .skill1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+        border-radius: 20px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .skill1 .skill-pic img {
+        width: 50px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: #ff9eddfe;
+    }
+}
+
+@media (min-width: 500px) {
+     body {
+        padding: 20px;
+    }
+
+    .main {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+
+    .skill1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+        border-radius: 20px;
+        width: 100%;
+        font-weight: bold;
+    }
+}
