@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal</title>
+    <link rel="stylesheet" href="phia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <style>
+        @media (min-width: 300px) {
+    body {
+        padding: 0px;
+        margin: 20px;
+        font-family: "Dosis", sans-serif;    
+        color: white;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10%;
+        width: 100%;
+        background-color: #89c07e;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        padding: 20px 10px;
+        font-weight: bold;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        background-color: #89c07e;
+        padding: 10px;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 40px;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 20px;
+        color: white;
+        background-color: #467750;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #89c07e;
+        padding: 10px 0px;
+        border-radius: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .title img {
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .nicknames {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: auto auto;
+        row-gap: 10px;
+        background-color: #467750;
+        font-weight: bold;
+        padding: 20px;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .nicknames .nn-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #89c07e;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .hobbies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        background-color: #467750;
+    }
+
+    .hobby {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+        background-color: #89c07e;
+        padding: 10px 10px;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .hobby-des {
+        font-size: 18px;
+    }
+
+    .hobby .hobby-pic img {
+        width: 50px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: #467750;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #467750;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .skill1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #89c07e;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+        border-radius: 20px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .skill1 .skill-pic img {
+        width: 50px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: #467750;
+    }
+}
+
+@media (min-width: 500px) {
+     body {
+        padding: 20px;
+    }
+
+    .main {
+        max-width: 800px;
+        margin: auto;
+        padding: 50px;
+        border-radius: 20px;
+        background-color: #35553bb9;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #89c07e;
+        padding: 10px;
+        border-radius: 60px;
+        margin-bottom: 20px;
+    }
+
+    .skill1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #89c07e;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 24px;
+        border-radius: 20px;
+        width: 100%;
+        font-weight: bold;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            Raphaelus Ethaneus
+        </div>
+        <div class="profile">
+            <img src="images/angel.jpg" alt="">
+            <h1>Justin Caitan</h1>
+        </div>
+        <div class="about">
+            <div class="title">ABOUT HIM
+                <img src="images/abouttin.png" alt="about">
+            </div>
+            <p>
+                Meet Justin Caitan, he is one of my close friends since I started college. Justin is always angry, but beneath his fiery exterior, he's fiercely loyal and has a heart of gold. 
+                His passion and intensity often drive us to push our limits, and his unwavering honesty ensures we always know where we stand. 
+                Despite his temper, Justin is someone we can always count on when it matters most.
+            </p>
+        </div>
+        <div class="title">HIS NICKNAMES
+            <img src="images/aka.png" alt="hobbies">
+        </div>
+        <div class="nicknames">
+            <div class="nn-item">Angel</div>
+            <div class="nn-item">Demon Slayer</div>
+            <div class="nn-item">Raphaelus Ethaneus</div>
+            <div class="nn-item">The rock</div>
+            <div class="nn-item">Half demon</div>
+            <div class="nn-item">Half angel</div>
+        </div>
+        <div class="hobbies">
+            <div class="title">HIS HOBBIES
+                <img src="images/hobbiestin.png" alt="hobbies">
+            </div>
+            <div class="hobby">
+                <div class="hobby-pic">
+                    <img src="images/basketball-player.png" alt="dancing">
+                </div>
+                <div class="hobby-des">
+                    He enjoys playing basketball, which keeps him active and competitive. 
+                </div>
+            </div>
+            <div class="hobby">
+                <div class="hobby-pic">
+                    <img src="images/singing 2.png" alt="dancing">
+                </div>
+                <div class="hobby-des">
+                    He also has a passion for singing, often entertaining friends with his vocal talent.
+                </div>
+            </div>
+            <div class="hobby">
+                <div class="hobby-pic">
+                    <img src="images/superhero.png" alt="dancing">
+                </div>
+                <div class="hobby-des">
+                    He loves flying, exploring the skies, saving cities whenever he gets the chance.                
+                </div>
+            </div>
+            <div class="hobby">
+                <div class="hobby-pic">
+                    <img src="images/movietin.png" alt="dancing">
+                </div>
+                <div class="hobby-des">
+                    He likes watching movies and TV shows to relax and unwind.
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="title">HIS SKILLS
+                <img src="images/skillstin.png" alt="about">
+            </div>
+            <div class="skill1">
+                <div class="skill-pic">
+                    <img src="images/multitask.png" alt="communication">
+                </div>
+                <div class="skill-des">
+                    Multitasking
+                </div>
+            </div>
+            <div class="skill1">
+                <div class="skill-pic">
+                    <img src="images/prediction.png" alt="communication">
+                </div>
+                <div class="skill-des">
+                    Prediction
+                </div>
+            </div>
+            <div class="skill1">
+                <div class="skill-pic">
+                    <img src="images/clock.png" alt="communication">
+                </div>
+                <div class="skill-des">
+                    Time Travel
+                </div>
+            </div>
+            <div class="skill1">
+                <div class="skill-pic">
+                    <img src="images/teleport.png" alt="communication">
+                </div>
+                <div class="skill-des">
+                    Teleportation
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

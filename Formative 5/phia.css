@@ -54,6 +54,29 @@
         padding: 10px;
         border-radius: 20px;
         background-color: rgba(246, 232, 240, 0.734);
+        margin-bottom: 20px;
+    }
+
+    .nicknames {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: auto auto;
+        row-gap: 10px;
+        background-color: rgba(246, 232, 240, 0.734);        
+        font-weight: bold;
+        padding: 20px;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .nicknames .nn-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 202, 210, 0.788);
+        padding: 10px;
+        border-radius: 20px;
     }
 
     .title {
