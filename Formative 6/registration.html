@@ -5,33 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="/Formative 6/style.css">
-    <script>
-        function submitToPage() {
-            window.location.href="login.html"
-        }
-    </script>
+    <script src="/Formative 6/registration.js"></script>
 </head>
 <body>
-    <div class="form">
+    <form id="myForm" class="form">
         <h1>Register</h1>
         <div class="form-items">
-            <h1>Email</h1>
-            <input type="email" id="email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
         </div>
         <div class="form-items">
-            <h1>Username</h1>
-            <input type="text" id="username">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
         </div>
         <div class="form-items">
-            <h1>Password</h1>
-            <input type="password" id="password">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8">
         </div>
         <div class="form-items">
-            <h1>Confirm Password</h1>
-            <input type="password" id="cpassword">
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" id="cpassword" name="cpassword" required>
         </div>
-        <input class="btn" type="button" value="Redirect Me" onclick="submitToPage()">
-    </div>
-    
+        <button type="submit" class="btn">Redirect Me</button>
+    </form>
 </body>
 </html>

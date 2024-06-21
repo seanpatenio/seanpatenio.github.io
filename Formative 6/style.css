@@ -13,6 +13,10 @@ body {
     padding: 40px;
 }
 
+.empty {
+    border-color: red;
+}
+
 @media (min-width: 300px) {
     .form {
         background-color: rgba(255, 255, 255, 0.336);
@@ -33,7 +37,7 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
-        font-size: 7px;
+        font-size: 15px;
         margin-top: 18px;
     }
 
@@ -77,4 +81,5 @@ body {
         color: white;
         font-weight: bold;
     }
+
 }
