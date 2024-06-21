@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summative 3</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .navbar-toggler {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .product-card {
+            margin-bottom: 20px;
+            height: 100%;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-img-top {
+            height: 200px; /* Adjust image height as needed */
+            object-fit: contain; /* Ensure the entire image fits within the container */
+        }
+
+        .card-body {
+            flex: 1; /* Make the card body take up remaining space */
+        }
+
+        /* Customize header */
+        .header {
+            background-color: black; /* Black background color */
+            color: white; /* White text color */
+            padding: 150px 0; /* Increased padding */
+            text-align: center; /* Center align text */
+        }
+
+        .title h1 {
+            font-size: 2.5rem; /* Larger font size for the title */
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+
+        /* Community section */
+        .community-section {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .community-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .community-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .community-section .stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .community-section .stat-item {
+            flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+            max-width: 300px;
+            padding: 0 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .community-section .stat-item img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .community-section .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .community-section .stat-item p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .community-section .btn {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border-radius: 30px;
+        }
+
+        /* Footer section */
+        .footer {
+            background-color: #343a40; /* Dark background color */
+            color: #fff; /* White text color */
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2023/06/Untitled_Artwork-116.png?fit=1200%2C800&ssl=1" alt="">
+                    Bricktopia
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="home" class="header">
+            <div class="title">
+                <h1>Your Ultimate LEGO Wonderland</h1>
+            </div>
+        </div>
+        <div id="products" class="container mt-4">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="https://img.brickowl.com/files/image_cache/larger/lego-batman-classic-tv-series-minifigure-25.jpg" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Lego Batman</h5>
+                            <p class="card-text">Dive into Gotham's action with LEGO Batman. Build iconic vehicles and battle villains like Joker and Harley Quinn.</p>
+                            <a href="#" class="btn btn-primary">$25.69</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="https://i.ebayimg.com/00/s/ODQ2WDg3MA==/z/2swAAOSwCHVdg-vJ/$_1.PNG" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Lego Spider-Man</h5>
+                            <p class="card-text">Swing into NYC adventures with LEGO Spider-Man. Build Spidey's gadgets and face off against Green Goblin and Doc Ock.</p>
+                            <a href="#" class="btn btn-primary">$25.69</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card product-card">
+                        <img src="https://cdn03.ciceksepeti.com/cicek/kc9667889-1/L/lego-minifigures-71026-dc-super-heroes-series-7.superman-kc9667889-1-10c5cb77c7464570a05a43742cd1b5b0.jpg" class="card-img-top" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Lego Superman</h5>
+                            <p class="card-text">Soar into heroic battles with LEGO Superman. Construct the Fortress of Solitude and defend Metropolis from Lex Luthor and General Zod.</p>
+                            <a href="#" class="btn btn-primary">$25.69</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Community Section -->
+        <div class="community-section">
+            <div class="container">
+                <h2>Join Our LEGO Community</h2>
+                <p>Connect with LEGO enthusiasts from around the world. Share your builds, tips, and experiences. Join us in celebrating the magic of LEGO!</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <img src="https://img.icons8.com/color/96/000000/money.png" alt="Sales Icon">
+                        <h3>100K+</h3>
+                        <p>Sales Per Year</p>
+                    </div>
+                    <div class="stat-item">
+                        <img src="https://img.icons8.com/color/96/000000/worldwide-location.png" alt="Worldwide Shipping Icon">
+                        <h3>Worldwide</h3>
+                        <p>Shipping</p>
+                    </div>
+                    <div class="stat-item">
+                        <img src="https://img.icons8.com/color/96/000000/numbered-list.png" alt="Number 1 LEGO Shop Icon" class="number-one">
+                        <h3>#1</h3>
+                        <p>LEGO Shop</p>
+                    </div>
+                </div>
+                <a href="#" id="joinNowButton" class="btn btn-primary">Join Now</a>
+            </div>
+        </div>
+        <!-- End Community Section -->
+
+       
+    <!-- Footer Section -->
+    <div id="contact" class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Contacts</a>
+                <a href="#">Emails</a>
+                <a href="#">Popular Releases</a>
+                <a href="#">About</a>
+                <a href="#">Help</a>
+            </div>
+            <div>
+                <p>&copy; 2024 Bricktopia. All Rights Reserved.</p>
+            </div>
+            <div class="footer-message">
+                <textarea id="footerMessage" placeholder="Enter your message here..." rows="3" style="width: 100%; margin-top: 20px;"></textarea>
+                <button id="sendMessageButton" class="btn btn-primary" style="margin-top: 10px;">Send Message</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Section -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("sendMessageButton").addEventListener("click", function() {
+                alert("Message sent");
+            });
+
+            document.getElementById("joinNowButton").addEventListener("click", function(event) {
+                event.preventDefault();
+                alert("Welcome to our community");
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
