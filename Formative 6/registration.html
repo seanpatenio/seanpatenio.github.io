@@ -3,132 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: monospace;
-        }
-
-        .form {
-            max-width: 515px;
-            margin: auto;
-            padding-top: 100px;
-        }
-
-        @media (min-width: 300px) {
-            .form {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                color: white;
-                background-color: #282b30;
-                padding-top: 50px;
-                padding-left: 40px;
-                padding-right: 40px;
-                height: 100vh;
-            }
-            .inputs {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                background-color: #3c485a;
-                font-weight: bold;
-                border-radius: 20px;
-                margin-bottom: 20px;
-                padding: 15px;
-                width: 90%;
-            }   
-            .inputs img {
-                width: 20px;
-                margin-right: 10px;
-            }
-            .inputs input {
-                padding: 10px;
-                border-radius: 20px;
-                background-color: transparent;
-                border: 0px;
-                width: 100%;
-                color: white;
-                font-size: 15px;
-            }
-            .inputs input::placeholder {
-                color: rgb(161, 158, 158);
-                font-size: 15px;
-            }
-            .btn {
-                margin-top: 10px;
-                border-radius: 20px;
-                padding: 20px;
-                width: 90%;
-                background-color: #8D36B8;
-                color: white;
-                font-weight: bold;
-                font-size: 20px;
-                cursor: pointer;
-                border: none;
-            }
-            textarea:focus, input:focus{
-                 outline: none;
-            }   
-        }
-
-        @media (min-width: 600px) {
-            body {
-                margin-top: 70px;
-                margin-bottom: 70px;
-            }
-            .form {
-                border-radius: 20px;
-                border: 5px solid #8D36B8;
-            }
-            .inputs {
-                margin-bottom: 20px;
-            }
-            .inputs img {
-                width: 25px;
-                margin-right: 10px;
-            }
-            .inputs input {
-                padding: 25px 10px;
-                
-            }
-            .inputs input::placeholder {
-                color: rgb(161, 158, 158);
-                font-size: 20px;
-            }
-            
-        }
-    </style>
-    
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/Formative 6/style.css">
     <script>
         function submitToPage() {
-            window.location.href = "login.html";
+            window.location.href="login.html"
         }
     </script>
-
 </head>
 <body>
     <div class="form">
-        <h1>REGISTER</h1>
-        <div class="inputs">
-            <img src="/Formative 6/images/email (1).png" alt="email">
-            <input type="email" id="email" placeholder="Email">
+        <h1>Register</h1>
+        <div class="form-items">
+            <h1>Email</h1>
+            <input type="email" id="email">
         </div>
-        <div class="inputs">
-            <img src="/Formative 6/images/username.png" alt="username">
-            <input type="text" id="username" placeholder="Username">
+        <div class="form-items">
+            <h1>Username</h1>
+            <input type="text" id="username">
         </div>
-        <div class="inputs">
-            <img src="/Formative 6/images/password.png" alt="password">
-            <input type="password" id="password" placeholder="Password">
+        <div class="form-items">
+            <h1>Password</h1>
+            <input type="password" id="password">
         </div>
-        <div class="inputs">
-            <img src="/Formative 6/images/password.png" alt="password">
-            <input type="password" id="password" placeholder="Confirm Password">
+        <div class="form-items">
+            <h1>Confirm Password</h1>
+            <input type="password" id="cpassword">
         </div>
-        <input class="btn" type="button" value="Redirect Me" onclick="submitToPage();">
+        <input class="btn" type="button" value="Redirect Me" onclick="submitToPage()">
     </div>
+    
 </body>
 </html>

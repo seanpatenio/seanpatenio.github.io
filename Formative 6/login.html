@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="/Formative 6/style.css">
 </head>
 <body>
-    
+    <div class="form">
+        <h1>Login</h1>
+        <div class="form-items">
+            <h1>Username</h1>
+            <input type="text" id="username">
+        </div>
+        <div class="form-items">
+            <h1>Password</h1>
+            <input type="password" id="password">
+        </div>
+        <div class="rememberNforgot">
+            <div class="rememberdiv">
+                <input type="checkbox" id="rememberme">
+                Remember Me
+            </div>
+            <div class="forgot">
+                Forgot Password
+            </div>
+        </div>
+        <input class="btn" type="button" value="Login" onclick="submitToPage()">
+        <div class="noacc">
+            <div class="noaccdiv">
+                Don't Have an Account? 
+                <a id="register-link" href="#">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set the href attribute for the Register link dynamically (optional)
+        document.getElementById('register-link').href = '/Formative 6/registration.html'; // Replace with the actual register URL
+    </script>
 </body>
 </html>

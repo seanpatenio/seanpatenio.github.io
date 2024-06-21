@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(images/mountain\ bg.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 40px;
+}
+
+@media (min-width: 300px) {
+    .form {
+        background-color: rgba(255, 255, 255, 0.336);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 20px;
+        color: white;
+        border: 2px solid white;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form .form-items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 7px;
+        margin-top: 18px;
+    }
+
+    .form-items input {
+        padding: 10px;
+        background-color: transparent;
+        margin-top: 10px;
+        border-radius: 20px;
+        border: 1px solid rgb(232, 232, 255);
+        color: white;
+        width: 100%;
+    }
+
+    .form .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        font-weight: bold;
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+    } 
+
+    .rememberNforgot, .noacc {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .rememberNforgot .rememberdiv {
+        margin-right: 24px;
+        font-weight: 300;
+    }
+
+    .noacc a {
+        color: white;
+        font-weight: bold;
+    }
+}
