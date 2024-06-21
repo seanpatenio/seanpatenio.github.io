@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,7 +11,7 @@
             font-family: monospace;
         }
 
-        .form-container {
+        .form {
             max-width: 515px;
             margin: auto;
             padding-top: 100px;
@@ -68,6 +67,7 @@
                 font-weight: bold;
                 font-size: 20px;
                 cursor: pointer;
+                border: none;
             }
             textarea:focus, input:focus{
                  outline: none;
@@ -76,11 +76,11 @@
 
         @media (min-width: 600px) {
             body {
-                margin-top: 100px;
+                margin-top: 70px;
+                margin-bottom: 70px;
             }
             .form {
                 border-radius: 20px;
-                height: 80vh;
                 border: 5px solid #8D36B8;
             }
             .inputs {
@@ -104,35 +104,31 @@
     
     <script>
         function submitToPage() {
-            // Perform any validation if needed
-            // If validation passes, redirect to the login page
             window.location.href = "login.html";
         }
     </script>
 
 </head>
 <body>
-    <div class="container form-container">
-        <div class="form text-center">
-            <h1>REGISTER</h1>
-            <div class="inputs form-group d-flex align-items-center bg-secondary text-white font-weight-bold rounded mb-4 p-3">
-                <img src="/Formative 6/images/email (1).png" alt="email">
-                <input type="email" class="form-control bg-transparent border-0 text-white" id="email" placeholder="Email">
-            </div>
-            <div class="inputs form-group d-flex align-items-center bg-secondary text-white font-weight-bold rounded mb-4 p-3">
-                <img src="/Formative 6/images/username.png" alt="username">
-                <input type="text" class="form-control bg-transparent border-0 text-white" id="username" placeholder="Username">
-            </div>
-            <div class="inputs form-group d-flex align-items-center bg-secondary text-white font-weight-bold rounded mb-4 p-3">
-                <img src="/Formative 6/images/password.png" alt="password">
-                <input type="password" class="form-control bg-transparent border-0 text-white" id="password" placeholder="Password">
-            </div>
-            <div class="inputs form-group d-flex align-items-center bg-secondary text-white font-weight-bold rounded mb-4 p-3">
-                <img src="/Formative 6/images/password.png" alt="password">
-                <input type="password" class="form-control bg-transparent border-0 text-white" id="confirm-password" placeholder="Confirm Password">
-            </div>
-            <input class="btn btn-primary mt-3 rounded-pill py-3 px-5 font-weight-bold" type="button" value="Redirect Me" onclick="submitToPage();">
+    <div class="form">
+        <h1>REGISTER</h1>
+        <div class="inputs">
+            <img src="/Formative 6/images/email (1).png" alt="email">
+            <input type="email" id="email" placeholder="Email">
         </div>
+        <div class="inputs">
+            <img src="/Formative 6/images/username.png" alt="username">
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="inputs">
+            <img src="/Formative 6/images/password.png" alt="password">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="inputs">
+            <img src="/Formative 6/images/password.png" alt="password">
+            <input type="password" id="password" placeholder="Confirm Password">
+        </div>
+        <input class="btn" type="button" value="Redirect Me" onclick="submitToPage();">
     </div>
 </body>
 </html>
