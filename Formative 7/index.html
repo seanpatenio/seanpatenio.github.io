@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formative 7</title>
+    <link rel="stylesheet" href="/Formative 7/style.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="upper">
+            <div class="img-div">
+                <img src="/Formative 7/images/feu-logo.png" alt="">
+            </div>
+            <div class="link-div">
+                <a href="#" id="browseCourses">Browse courses</a>
+                <span id="browseCoursesMessage" class="info-message"></span>
+            </div>
+        </div>
+        <div class="main">
+            <form id="myForm" class="form">
+                <div class="form-items">
+                    <label for="username">User</label>
+                    <input type="text" id="username" name="username" required>
+                    <span id="usernameError" class="error-message"></span>
+                </div>
+                <div class="form-items">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+                <div class="stay">
+                    <div class="stayNforgot-div">
+                        <div class="stay-btn">
+                            <input type="checkbox" id="staySignedIn"> Stay signed in
+                        </div>
+                        <div class="forgot-div">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="btn-div">
+                        <button type="submit" id="loginBtn" class="btn">Log In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="microsoft-div">
+                <div class="microsoft-imgNlink">
+                    <div class="microsoft-img">
+                        <img src="/Formative 7/images/office.png" alt="">
+                    </div>
+                    <a href="#">Login with Microsoft</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#" id="help">Help</a>
+                <span id="helpMessage" class="info-message"></span>
+                <a href="#" id="privacyPolicy">Privacy Policy</a>
+                <span id="privacyPolicyMessage" class="info-message"></span>
+                <a href="#" id="acceptableUsePolicy">Acceptable Use Policy</a>
+                <span id="acceptableUsePolicyMessage" class="info-message"></span>
+                <a href="#" id="facebook">Facebook</a>
+                <span id="facebookMessage" class="info-message"></span>
+                <a href="#" id="twitter">Twitter</a>
+                <span id="twitterMessage" class="info-message"></span>
+            </div>
+            <div class="instructure-div">
+                <img src="/Formative 7/images/instructure-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function(event) {
+            
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            
+            const minLength = 8;
+            const hasUpperCase = /[A-Z]/;
+            const hasLowerCase = /[a-z]/;
+            const hasDigit = /\d/;
+            const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+            let valid = true;
+
+            
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Please fill in the username.';
+                valid = false;
+            } else if (username !== 'existingUser') { 
+                document.getElementById('usernameError').textContent = 'Username does not exist.';
+                valid = false;
+            }
+
+            
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Please fill in the password.';
+                valid = false;
+            } else {
+                if (password.length < minLength) {
+                    document.getElementById('passwordError').textContent = 'Password must be at least ' + minLength + ' characters long.';
+                    valid = false;
+                }
+
+                if (!hasUpperCase.test(password)) {
+                    document.getElementById('passwordError').textContent = 'Password must contain at least one uppercase letter.';
+                    valid = false;
+                }
+
+                if (!hasLowerCase.test(password)) {
+                    document.getElementById('passwordError').textContent = 'Password must contain at least one lowercase letter.';
+                    valid = false;
+                }
+
+                if (!hasDigit.test(password)) {
+                    document.getElementById('passwordError').textContent = 'Password must contain at least one digit.';
+                    valid = false;
+                }
+
+                if (!hasSpecialChar.test(password)) {
+                    document.getElementById('passwordError').textContent = 'Password must contain at least one special character.';
+                    valid = false;
+                }
+            }
+
+            
+            if (!valid) {
+                event.preventDefault();
+            } else {
+                
+                sessionStorage.setItem('isLoggedIn', 'true');
+            }
+        });
+
+        function addValidation(linkId, messageId, message) {
+            document.getElementById(linkId).addEventListener('click', function(event) {
+                const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+                if (!isLoggedIn || isLoggedIn !== 'true') {
+                    event.preventDefault();
+                    document.getElementById(messageId).textContent = message;
+                }
+            });
+        }
+
+        addValidation('browseCourses', 'browseCoursesMessage', 'Please log in first.');
+        addValidation('help', 'helpMessage', 'Please log in first.');
+        addValidation('privacyPolicy', 'privacyPolicyMessage', 'Please log in first.');
+        addValidation('acceptableUsePolicy', 'acceptableUsePolicyMessage', 'Please log in first.');
+        addValidation('facebook', 'facebookMessage', 'Please log in first.');
+        addValidation('twitter', 'twitterMessage', 'Please log in first.');
+
+        document.getElementById('staySignedIn').addEventListener('change', function(event) {
+            if (event.target.checked) {
+                const confirmed = confirm("Are you sure you want to stay signed in?");
+                if (!confirmed) {
+                    event.target.checked = false;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

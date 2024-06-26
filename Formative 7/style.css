@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.whole {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+   background-color: #1b5034;
+   font-family: sans-serif;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}
+
+.info-message {
+    color: rgb(255, 0, 0);
+    font-size: 0.8em;
+}
+
+@media (min-width: 300px) {
+    .upper  {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 20px 10px;
+    }
+
+    .upper .img-div {
+        margin-right: 20px;
+    }
+
+    .upper .img-div img {
+        width: 200px;
+    }
+
+    .upper .link-div a {
+        color: white;
+        font-size: small;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 50px;
+    }
+
+    .main .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .form .form-items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        color: white;
+    }
+
+    .main .form .form-items label {
+        font-weight: bold;
+        font-size: smaller;
+    }
+
+    .main .form .form-items input {
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 3px;
+        border: none;
+    }
+
+    .main .stay {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+    }
+
+    .main .stay .stayNforgot-div .stay-btn {
+        margin-bottom: 5px;
+        color: white;
+        font-size: smaller;
+    }
+
+    .main .stay .stayNforgot-div .forgot-div a {
+        color: white;
+        font-size: smaller;
+    }
+
+    .main .stay .btn-div button {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 4px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .microsoft-div {
+        padding-top: 30px;
+    }
+
+    .microsoft-imgNlink {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .microsoft-imgNlink a {
+        color: white;
+        text-decoration: none;
+        font-size: smaller;
+        margin-left: 10px;
+    }
+
+    .footer .microsoft-div .microsoft-imgNlink .microsoft-img img {
+        width: 30px;
+        background-color: white;
+        padding: 2px;
+        border-radius: 5px;
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 8px;
+        margin-top: 70px;
+        padding: 0px 50px;
+    }
+
+    .footer-links a {
+        color: white;
+        margin: 5px;
+    }
+
+    .footer .instructure-div img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 500px) {
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-top: 70px;
+        padding: 0px 50px;
+    }
+}
