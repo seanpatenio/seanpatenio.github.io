@@ -40,7 +40,7 @@
     .header .logo {
         display: flex;
         align-items: center;
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
     .header .logo img {
