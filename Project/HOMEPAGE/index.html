@@ -47,7 +47,7 @@
                     <h1>Products</h1> 
                 </div>
                 <div class="carousel-container">
-                    <h2>Our Special Offers!</h2>
+                    <h2>Our </h2>
                     <div class="product-carousel special-offers-carousel">
                         <div class="product-item">
                             <img src="/Project/images (products)/globalticket.png" alt="Special Offer 1">
@@ -189,57 +189,61 @@
         </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var modal = document.getElementById("popupModal");
-            var closeModalButton = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("popupModal");
+    var closeModalButton = document.getElementById("closeModal");
 
-            modal.style.display = "flex";
+    modal.style.display = "flex";
 
-            closeModalButton.onclick = function() {
-                modal.style.display = "none";
-            }
+    closeModalButton.onclick = function() {
+        modal.style.display = "none";
+    }
 
-            var links = document.getElementsByClassName('header-links')[0];
-            var menuIcon = document.getElementsByClassName('menu-icon')[0];
+    var links = document.getElementsByClassName('header-links')[0];
+    var menuIcon = document.getElementsByClassName('menu-icon')[0];
 
-            menuIcon.addEventListener('click', function() {
-                links.classList.toggle('show');
-            });
+    menuIcon.addEventListener('click', function() {
+        links.classList.toggle('show');
+    });
 
-            var carouselContainers = document.getElementsByClassName('carousel-container');
+    var carouselContainers = document.getElementsByClassName('carousel-container');
 
-            Array.prototype.forEach.call(carouselContainers, function(container) {
-                var carousel = container.getElementsByClassName('product-carousel')[0];
-                var prevButton = container.getElementsByClassName('carousel-prev')[0];
-                var nextButton = container.getElementsByClassName('carousel-next')[0];
+    Array.prototype.forEach.call(carouselContainers, function(container) {
+        var carousel = container.getElementsByClassName('product-carousel')[0];
+        var prevButton = container.getElementsByClassName('carousel-prev')[0];
+        var nextButton = container.getElementsByClassName('carousel-next')[0];
 
-                var currentSlide = 0;
-                var slides = carousel.getElementsByClassName('product-item');
-                var totalSlides = slides.length;
+        var currentSlide = 0;
+        var slides = carousel.getElementsByClassName('product-item');
+        var totalSlides = slides.length;
 
-                showSlide(currentSlide);
+        showSlide(currentSlide);
 
-                prevButton.addEventListener('click', function() {
-                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                    showSlide(currentSlide);
-                });
-
-                nextButton.addEventListener('click', function() {
-                    currentSlide = (currentSlide + 1) % totalSlides;
-                    showSlide(currentSlide);
-                });
-
-                function showSlide(slideIndex) {
-                    Array.prototype.forEach.call(slides, function(slide) {
-                        slide.style.display = 'none';
-                    });
-
-                    slides[slideIndex].style.display = 'block';
-
-                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
-                }
-            });
+        prevButton.addEventListener('click', function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
         });
+
+        nextButton.addEventListener('click', function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        function showSlide(slideIndex) {
+            Array.prototype.forEach.call(slides, function(slide) {
+                slide.style.display = 'none';
+            });
+
+            slides[slideIndex].style.display = 'block';
+
+            var maxHeight = 0;
+            Array.prototype.forEach.call(slides, function(slide) {
+                maxHeight = Math.max(maxHeight, slide.offsetHeight);
+            });
+            carousel.style.height = maxHeight + 'px';
+        }
+    });
+});
 
 
     </script>
