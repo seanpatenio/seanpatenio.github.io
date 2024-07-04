@@ -372,7 +372,7 @@ main {
 
 .carousel-container {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px rgb(0, 102, 255);
     border-radius: 20px;
@@ -387,16 +387,7 @@ main {
     flex-wrap: wrap;
 }
 
-.product-item {
-    width: 100%; 
-    max-width: 300px; 
-    height: auto; 
-    text-align: center;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 10px;
-}
-
+zzz
 .product-item img {
     max-width: 100%;
     max-height: 200px;
