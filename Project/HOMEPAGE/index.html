@@ -47,7 +47,7 @@
                     <h1>Products</h1> 
                 </div>
                 <div class="carousel-container">
-                    <h2>Our Special Offers</h2>
+                    <h2>Our Special Offersss</h2>
                     <div class="product-carousel special-offers-carousel">
                         <div class="product-item">
                             <img src="/Project/images (products)/globalticket.png" alt="Special Offer 1">
@@ -197,7 +197,7 @@
 
             closeModalButton.onclick = function() {
                 modal.style.display = "none";
-            }
+            };
 
             var links = document.getElementsByClassName('header-links')[0];
             var menuIcon = document.getElementsByClassName('menu-icon')[0];
@@ -236,12 +236,34 @@
 
                     slides[slideIndex].style.display = 'block';
 
-                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
+                    setTimeout(function() {
+                        var maxHeight = getMaxHeight(slides);
+                        carousel.style.height = maxHeight + 'px';
+                    }, 100); //
                 }
+
+                function getMaxHeight(elements) {
+                    var maxHeight = 0;
+                    Array.prototype.forEach.call(elements, function(element) {
+                        var elementHeight = element.offsetHeight;
+                        if (elementHeight > maxHeight) {
+                            maxHeight = elementHeight;
+                        }
+                    });
+                    return maxHeight;
+                }
+
+                window.addEventListener('load', function() {
+                    var maxHeight = getMaxHeight(slides);
+                    carousel.style.height = maxHeight + 'px';
+                });
+
+                window.addEventListener('resize', function() {
+                    var maxHeight = getMaxHeight(slides);
+                    carousel.style.height = maxHeight + 'px';
+                });
             });
         });
-
-
     </script>
 </body>
 </html>
