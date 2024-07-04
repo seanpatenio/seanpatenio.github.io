@@ -379,14 +379,12 @@ main {
     padding: 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    height: auto; 
 }
 
 .product-carousel {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100%; 
 }
 
 .product-item {
