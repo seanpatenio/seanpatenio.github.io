@@ -22,14 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         function showSlide(slideIndex) {
-            var slides = carousel.querySelectorAll('.product-item');
-
-            slides.forEach(function(slide) {
+            Array.prototype.forEach.call(slides, function(slide) {
                 slide.style.display = 'none';
             });
-
+        
             slides[slideIndex].style.display = 'block';
-
+        
             carousel.style.height = slides[slideIndex].offsetHeight + 'px';
         }
     });
