@@ -139,7 +139,11 @@ nav ul li a {
 
 @media (max-width: 768px) {
     .nav-container {
-        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .logo {
+        margin-bottom: 10px;
     }
     .logo img {
         height: 40px;
@@ -147,34 +151,19 @@ nav ul li a {
     .logo span {
         font-size: 0.8em;
     }
+    nav {
+        margin-top: 10px;
+    }
     nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     nav ul li {
-        margin-left: 0;
+        margin: 0;
         margin-bottom: 10px;
     }
-    .product-details-container {
-        padding: 15px;
-    }
-    .product-details-container h3 {
-        font-size: 1.5em;
-    }
-    .product-details-container img {
-        max-height: 150px;
-        margin-bottom: 15px;
-    }
-    .product-item img {
-        width: 40px;
-    }
-    .product-details-container .price {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-    }
-    .product-details-container .add-to-cart {
-        padding: 8px 15px;
-        font-size: 0.9em;
+    nav ul li a {
+        font-size: 1em;
     }
 }
 
