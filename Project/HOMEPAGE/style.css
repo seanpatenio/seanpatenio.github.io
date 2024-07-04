@@ -383,20 +383,19 @@ main {
 
 .product-carousel {
     display: flex;
-    flex-wrap: nowrap; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .product-item {
-    flex: 0 0 auto; 
-    width: 300px; 
-    margin: 10px; 
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgb(249, 250, 250);
 }
 
 .product-item img {
@@ -435,11 +434,11 @@ main {
 }
 
 .carousel-nav {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 10px;
 }
-
 
 .carousel-prev, .carousel-next {
     background-color: #ffcb05;
