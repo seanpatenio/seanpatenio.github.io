@@ -230,14 +230,17 @@
                 });
 
                 function showSlide(slideIndex) {
-                    Array.prototype.forEach.call(slides, function(slide) {
-                        slide.style.display = 'none';
-                    });
+            Array.prototype.forEach.call(slides, function(slide) {
+                slide.style.display = 'none';
+            });
 
-                    slides[slideIndex].style.display = 'block';
+            slides[slideIndex].style.display = 'block';
+            
+            carousel.style.height = 'auto';
 
-                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
-                }
+            setTimeout(function() {
+                carousel.style.height = slides[slideIndex].offsetHeight + 'px';
+            }, 50); 
             });
         });
 
