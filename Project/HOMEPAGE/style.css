@@ -385,6 +385,8 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    height: 350px; 
+    overflow: hidden;
 }
 
 .product-item {
@@ -395,6 +397,7 @@ main {
     box-shadow: 0 0 10px rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
     box-shadow: 0 0 10px rgb(249, 250, 250);
 }
 
