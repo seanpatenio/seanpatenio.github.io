@@ -34,7 +34,7 @@ html {
         background-attachment: fixed;
         background-position: center top;
         padding: 20px;
-        height: 190vh;
+        height: 100vh;
 
     }
 
@@ -437,6 +437,14 @@ main {
         width: 100%;
     }
 }
+
+@media (max-width: 400px) {
+    
+    .title {
+        margin-top: 100px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .nav-container {
