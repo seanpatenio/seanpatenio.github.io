@@ -81,7 +81,7 @@ nav ul li a {
 }
 
 .product-details-container {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -113,6 +113,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .product-item img {
@@ -125,6 +126,7 @@ nav ul li a {
     margin: 0;
     line-height: 1.6;
     text-align: left;
+    flex: 1;
 }
 
 .product-details-container .price {
@@ -162,13 +164,13 @@ nav ul li a {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.536);
+        background-color: rgba(255, 255, 255, 0.9);
         position: absolute;
         top: 60px;
         left: 0;
         padding: 10px 0;
-        border-radius: 50px;
-        margin-top: 65px;
+        border-radius: 40px;
+        margin-top: 40px; 
     }
 
     .header-links.show {
@@ -192,13 +194,39 @@ nav ul li a {
         color: #333;
         text-decoration: none;
     }
+
+    .product-details-container {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .product-details-container img {
+        max-height: 150px;
+    }
+
+    .product-details-container h3 {
+        font-size: 1.5em;
+    }
+
+    .product-item img {
+        width: 40px;
+    }
+
+    .product-details-container .price {
+        font-size: 1.2em;
+    }
+
+    .product-details-container .add-to-cart {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 601px) and (max-width: 1000px) {
     .header-links a {
         text-align: center;
         padding: 15px;
-        font-size: 8px;
+        font-size: 10px;
         font-weight: bold;
         margin-right: 5px;
         border-radius: 20px;
@@ -209,22 +237,65 @@ nav ul li a {
         background-color: #3b4cca;
         color: #ffe84f;
     }
+
+    .product-details-container {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .product-details-container img {
+        max-height: 180px;
+    }
+
+    .product-details-container h3 {
+        font-size: 1.8em;
+    }
+
+    .product-item img {
+        width: 45px;
+    }
+
+    .product-details-container .price {
+        font-size: 1.4em;
+    }
+
+    .product-details-container .add-to-cart {
+        padding: 9px 18px;
+        font-size: 0.95em;
+    }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1001px) {
     .header-links a {
         text-align: center;
         padding: 15px;
         font-size: 12px;
         font-weight: bold;
     }
-}
 
-@media (min-width: 1000px) {
-    .header-links a {
-        text-align: center;
-        padding: 15px;
-        font-size: 17px;
-        font-weight: bold;
+    .product-details-container {
+        width: 80%;
+        margin: 20px;
+    }
+
+    .product-details-container img {
+        max-height: 200px;
+    }
+
+    .product-details-container h3 {
+        font-size: 2em;
+    }
+
+    .product-item img {
+        width: 50px;
+    }
+
+    .product-details-container .price {
+        font-size: 1.5em;
+    }
+
+    .product-details-container .add-to-cart {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
