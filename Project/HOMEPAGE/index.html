@@ -236,7 +236,8 @@
 
                     slides[slideIndex].style.display = 'block';
 
-                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
+                    var maxHeight = Math.max(...Array.from(slides, s => s.offsetHeight));
+                    carousel.style.height = maxHeight + 'px';
                 }
             });
         });
