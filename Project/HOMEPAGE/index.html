@@ -190,15 +190,32 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var carousels = document.querySelectorAll('.carousel-container');
+            var modal = document.getElementById("popupModal");
+            var closeModalButton = document.getElementById("closeModal");
 
-            carousels.forEach(function(container) {
-                var carousel = container.querySelector('.product-carousel');
-                var prevButton = container.querySelector('.carousel-prev');
-                var nextButton = container.querySelector('.carousel-next');
-                var slides = carousel.querySelectorAll('.product-item');
-                var totalSlides = slides.length;
+            modal.style.display = "flex";
+
+            closeModalButton.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            var links = document.getElementsByClassName('header-links')[0];
+            var menuIcon = document.getElementsByClassName('menu-icon')[0];
+
+            menuIcon.addEventListener('click', function() {
+                links.classList.toggle('show');
+            });
+
+            var carouselContainers = document.getElementsByClassName('carousel-container');
+
+            Array.prototype.forEach.call(carouselContainers, function(container) {
+                var carousel = container.getElementsByClassName('product-carousel')[0];
+                var prevButton = container.getElementsByClassName('carousel-prev')[0];
+                var nextButton = container.getElementsByClassName('carousel-next')[0];
+
                 var currentSlide = 0;
+                var slides = carousel.getElementsByClassName('product-item');
+                var totalSlides = slides.length;
 
                 showSlide(currentSlide);
 
@@ -213,40 +230,18 @@
                 });
 
                 function showSlide(slideIndex) {
-                    slides.forEach(function(slide) {
+                    Array.prototype.forEach.call(slides, function(slide) {
                         slide.style.display = 'none';
                     });
 
                     slides[slideIndex].style.display = 'block';
 
-                    setTimeout(function() {
-                        var maxHeight = getMaxHeight(slides);
-                        carousel.style.height = maxHeight + 'px';
-                    }, 100); 
+                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
                 }
-
-                function getMaxHeight(elements) {
-                    var maxHeight = 0;
-                    elements.forEach(function(element) {
-                        var elementHeight = element.offsetHeight;
-                        if (elementHeight > maxHeight) {
-                            maxHeight = elementHeight;
-                        }
-                    });
-                    return maxHeight;
-                }
-
-                window.addEventListener('load', function() {
-                    var maxHeight = getMaxHeight(slides);
-                    carousel.style.height = maxHeight + 'px';
-                });
-
-                window.addEventListener('resize', function() {
-                    var maxHeight = getMaxHeight(slides);
-                    carousel.style.height = maxHeight + 'px';
-                });
             });
         });
+
+
     </script>
 </body>
 </html>
