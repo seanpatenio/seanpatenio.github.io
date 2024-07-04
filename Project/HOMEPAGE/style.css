@@ -30,30 +30,31 @@ html {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal content box */
 .modal-content {
     background-image: url(/Project/images/pika.jpg);
-    object-fit: contain;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom left;
     padding: 50px;
     border-radius: 10px;
     text-align: center;
     max-width: 500px;
-    width: 80%;
+    width: 100%;
     color: white;
 }
 
 .modal-content h2 {
     margin-top: 0;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 .modal-content p {
     margin: 20px 0;
     font-size: 1em;
     line-height: 1.5;
+    font-weight: bold;
 }
 
 .modal-content button {
