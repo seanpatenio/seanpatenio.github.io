@@ -9,6 +9,13 @@
 <body>
     <div class="whole">
         <div class="main" id="main">
+            <div id="popupModal" class="modal">
+                <div class="modal-content">
+                    <h2>Disclaimer</h2>
+                    <p>All assets and information herewith are owned by [company name]. Copyrights belong to them. This is for academic purposes only.</p>
+                    <button id="closeModal">Continue</button>
+                </div>
+            </div>            
             <div class="header">
                 <div class="logo">
                     <img src="/Project/images/pg logo.png" alt="">
@@ -182,21 +189,33 @@
         </div>
     </div>
     <script>
-        function toggleMenu() {
-            var links = document.querySelector('.header-links');
-            links.classList.toggle('show');
-        }
-
         document.addEventListener("DOMContentLoaded", function() {
-            var carouselContainers = document.querySelectorAll('.carousel-container');
+            var modal = document.getElementById("popupModal");
+            var closeModalButton = document.getElementById("closeModal");
 
-            carouselContainers.forEach(function(container) {
-                var carousel = container.querySelector('.product-carousel');
-                var prevButton = container.querySelector('.carousel-prev');
-                var nextButton = container.querySelector('.carousel-next');
+            modal.style.display = "flex";
+
+            closeModalButton.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            var links = document.getElementsByClassName('header-links')[0];
+            var menuIcon = document.getElementsByClassName('menu-icon')[0];
+
+            menuIcon.addEventListener('click', function() {
+                links.classList.toggle('show');
+            });
+
+            var carouselContainers = document.getElementsByClassName('carousel-container');
+
+            Array.prototype.forEach.call(carouselContainers, function(container) {
+                var carousel = container.getElementsByClassName('product-carousel')[0];
+                var prevButton = container.getElementsByClassName('carousel-prev')[0];
+                var nextButton = container.getElementsByClassName('carousel-next')[0];
 
                 var currentSlide = 0;
-                var totalSlides = carousel.querySelectorAll('.product-item').length;
+                var slides = carousel.getElementsByClassName('product-item');
+                var totalSlides = slides.length;
 
                 showSlide(currentSlide);
 
@@ -211,9 +230,7 @@
                 });
 
                 function showSlide(slideIndex) {
-                    var slides = carousel.querySelectorAll('.product-item');
-
-                    slides.forEach(function(slide) {
+                    Array.prototype.forEach.call(slides, function(slide) {
                         slide.style.display = 'none';
                     });
 
@@ -223,6 +240,7 @@
                 }
             });
         });
+
 
     </script>
 </body>
