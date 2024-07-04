@@ -216,6 +216,7 @@
                 var currentSlide = 0;
                 var slides = carousel.getElementsByClassName('product-item');
                 var totalSlides = slides.length;
+                var carouselHeight = carousel.offsetHeight; 
 
                 showSlide(currentSlide);
 
@@ -236,7 +237,8 @@
 
                     slides[slideIndex].style.display = 'block';
 
-                    carousel.style.height = slides[slideIndex].offsetHeight + 'px';
+                    if (carousel.offsetHeight !== carouselHeight) {
+                        carousel.style.height = carouselHeight + 'px';
                 }
             });
         });
