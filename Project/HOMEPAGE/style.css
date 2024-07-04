@@ -16,6 +16,14 @@ html {
     margin-bottom: 20px;
 }
 
+.productpage {
+    background-image: url('https://moewalls.com/wp-content/uploads/2023/01/pokemon-emerald-title-screen-pixel-thumb.jpg');
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center top;
+}
+
 @media (min-width: 300px) {
     .productpage, .about, .footer {
         display: flex;
