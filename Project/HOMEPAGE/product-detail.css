@@ -1,4 +1,4 @@
-body {
+    body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('https://pbs.twimg.com/media/F0wYfBxWYAEhZBR.png:large');
@@ -15,7 +15,7 @@ body {
 header {
     padding: 20px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     background: transparent;
     width: 100%;
@@ -26,7 +26,7 @@ header {
     border-radius: 20px;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     width: 80%;
     max-width: 1200px;
@@ -72,16 +72,23 @@ nav ul li a {
     font-size: 1.1em;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
 .product-details-container {
     width: 100%;
     max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 20px;
-    margin: 20px auto; 
+    margin: 20px auto;
     text-align: center;
     box-shadow: 0 0 10px rgb(0, 102, 255);
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,9 +97,9 @@ nav ul li a {
 .product-details-container img {
     max-width: 100%;
     height: auto;
-    max-height: 200px; 
-    width: auto; 
-    border-radius: 10px; 
+    max-height: 200px;
+    width: auto;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -108,9 +115,9 @@ nav ul li a {
 }
 
 .product-item img {
-    width: 50px; 
+    width: 50px;
     height: auto;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .product-item p {
@@ -142,23 +149,7 @@ nav ul li a {
 }
 
 .product-details-container + .product-details-container {
-    margin-top: 65px; 
-}
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-.header-links {
-    display: flex;
-}
-
-.header-links a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+    margin-top: 65px;
 }
 
 @media (max-width: 600px) {
@@ -220,16 +211,6 @@ nav ul li a {
         font-size: 12px;
         font-weight: bold;
     }
-
-    .title h1 {
-        font-size: 50px;
-    }
-
-    .title h4 {
-        margin-top: 20px;
-        font-weight: 400;
-        font-size: larger;
-    }
 }
 
 @media (min-width: 1000px) {
@@ -238,15 +219,5 @@ nav ul li a {
         padding: 15px;
         font-size: 17px;
         font-weight: bold;
-    }
-
-    .title h1 {
-        font-size: 50px;
-    }
-
-    .title h4 {
-        margin-top: 30px;
-        font-weight: 400;
-        font-size: 30px;
     }
 }
