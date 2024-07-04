@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var carouselContainers = document.querySelectorAll('.carousel-container');
+    var carouselContainers = document.getElementsByClassName('carousel-container');
 
-    carouselContainers.forEach(function(container) {
-        var carousel = container.querySelector('.product-carousel');
-        var prevButton = container.querySelector('.carousel-prev');
-        var nextButton = container.querySelector('.carousel-next');
+    Array.from(carouselContainers).forEach(function(container) {
+        var carousel = container.getElementsByClassName('product-carousel')[0];
+        var prevButton = container.getElementsByClassName('carousel-prev')[0];
+        var nextButton = container.getElementsByClassName('carousel-next')[0];
 
         var currentSlide = 0;
-        var slides = carousel.querySelectorAll('.product-item');
+        var slides = carousel.getElementsByClassName('product-item');
         var totalSlides = slides.length;
 
         showSlide(currentSlide);
@@ -23,13 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         function showSlide(slideIndex) {
-            slides.forEach(function(slide) {
+            Array.from(slides).forEach(function(slide) {
                 slide.style.display = 'none';
             });
 
             slides[slideIndex].style.display = 'block';
-
-            carousel.style.height = slides[slideIndex].offsetHeight + 'px';
         }
     });
 });
