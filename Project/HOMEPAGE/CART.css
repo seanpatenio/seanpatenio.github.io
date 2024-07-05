@@ -98,6 +98,8 @@ h1 {
     border-radius: 20px;
     padding: 20px;
     margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .cart-item {
@@ -153,7 +155,6 @@ h1 {
 .checkout-button:hover {
     background-color: #e6b804;
 }
-
 
 @media (max-width: 600px) {
     .menu-icon {
@@ -219,7 +220,7 @@ h1 {
 
     .cart-items-container {
         width: 90%; 
-        margin: 20px;
+        margin: 20px auto; 
     }
 }
 
@@ -233,6 +234,6 @@ h1 {
 
     .cart-items-container {
         width: 80%; 
-        margin: 20px;
+        margin: 20px auto; 
     }
 }
