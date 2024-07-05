@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon GO Fest 2024: Global Ticket</title>
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/Project/images/pg logo.png" alt="Pokémon Go Logo">
+                <span>Webstore</span>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul class="header-links">
+                    <li><a href="/Project/index.html">Home</a></li>
+                    <li><a href="/Project/index.html">Products</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="product-details-container" id="global-ticket">
+            <img src="/Project/images (products)/globalticket.png" alt="Pokémon GO Fest 2024: Global Ticket">
+            <h3>Pokémon GO Fest 2024: Global Ticket</h3>
+            <div class="product-item">
+                <img src="/Project/images (products)/x1ticket.webp" alt="Ticket">
+                <p>x1 Ticket</p>
+            </div>
+            <div class="product-item">
+                <img src="/Project/images (products)/gotee.webp" alt="GO Fest 2024 Tee (Gray)">
+                <p>x1 GO Fest 2024 Tee (Gray)</p>
+            </div>
+            <div class="product-item">
+                <img src="/Project/images (products)/gotee.webp" alt="GO Fest 2024 Tee (Gray)">
+                <p>x1 GO Fest 2024 Tee (Gray)</p>
+            </div>
+            <p class="price">₱439.10</p>
+            <a href="CART.html" button class="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            var links = document.getElementsByClassName('header-links')[0];
+            if (links.classList.contains('show')) {
+                links.classList.remove('show');
+            } else {
+                links.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
