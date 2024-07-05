@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <style>
-        /* General Body Styling */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +22,6 @@
             color: #333;
         }
 
-        /* Header Styling */
         header {
             padding: 20px;
             width: 100%;
@@ -47,7 +45,7 @@
         .logo {
             display: flex;
             align-items: center;
-            cursor: pointer; /* Make the logo clickable */
+            cursor: pointer; 
         }
 
         .logo img {
@@ -89,14 +87,13 @@
             color: #fff;
         }
 
-        /* Main Content Styling */
         main {
             width: 100%;
             padding: 20px;
             display: flex;
             justify-content: center;
             flex: 1;
-            scroll-behavior: smooth; /* Smooth scrolling animation */
+            scroll-behavior: smooth; 
         }
 
         .about-container {
@@ -175,7 +172,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Smooth Scrolling Animation for Links */
         a[href^="#"] {
             transition: all 0.3s ease;
         }
@@ -184,7 +180,6 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive Styling */
         @media (max-width: 768px) {
             .about-section {
                 flex-direction: column;
@@ -227,7 +222,6 @@
     </header>
     <main>
         <div class="about-container">
-            <!-- Niantic Section -->
             <div class="about-section" id="about-niantic">
                 <div class="about-section-content">
                     <h2>About Niantic</h2>
@@ -236,7 +230,6 @@
                 <img src="nianticlogo.png" alt="Niantic Logo">
             </div>
 
-            <!-- Nintendo Section -->
             <div class="about-section" id="about-nintendo">
                 <div class="about-section-content">
                     <h2>About Nintendo</h2>
@@ -245,7 +238,6 @@
                 <img src="nintendologo.png" alt="Nintendo Logo">
             </div>
 
-            <!-- Pokémon GO Webstore Section -->
             <div class="about-section" id="about-webstore">
                 <div class="about-section-content">
                     <h2>About Pokémon GO Webstore</h2>
@@ -261,7 +253,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        // Smooth scrolling for anchor links
         $('a[href^="#"]').on('click', function(event) {
             var target = $(this.getAttribute('href'));
             if (target.length) {
