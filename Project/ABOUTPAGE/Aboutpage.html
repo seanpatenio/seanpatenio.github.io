@@ -7,37 +7,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <style>
+        /* General Body Styling */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('pokemon wallpaper.jpg'); /* Background image updated here */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('pokemon wallpaper.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
             align-items: center;
-            background-color: #f3f3f3; /* Fallback background color */
+            overflow-x: hidden;
+            color: #333;
         }
 
+        /* Header Styling */
         header {
             padding: 20px;
+            width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: transparent;
-            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav-container {
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            padding: 10px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             width: 80%;
             max-width: 1200px;
         }
@@ -45,28 +47,31 @@
         .logo {
             display: flex;
             align-items: center;
+            cursor: pointer; /* Make the logo clickable */
         }
 
         .logo img {
             height: 50px;
             margin-right: 10px;
+            transition: transform 0.3s ease;
         }
 
         .logo span {
-            font-size: 1em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #333;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
+        .logo img:hover {
+            transform: scale(1.1);
         }
 
-        nav ul li {
-            margin-left: 20px;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li a {
@@ -74,72 +79,146 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
 
+        nav ul li a:hover {
+            background: #ff9900;
+            color: #fff;
+        }
+
+        /* Main Content Styling */
         main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             width: 100%;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            scroll-behavior: smooth; /* Smooth scrolling animation */
         }
 
         .about-container {
             width: 80%;
             max-width: 1200px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            padding: 20px;
+            padding: 30px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .about-section {
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .about-section h2 {
+        .about-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .about-section-content {
+            max-width: 55%;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .about-section-content h2 {
             font-size: 2em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #ffcb05;
+            display: inline-block;
         }
 
-        .about-section p {
+        .about-section-content p {
             line-height: 1.6;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 1.1em;
         }
 
-        .about-section ul {
-            padding-left: 20px;
+        .about-section img {
+            max-width: 35%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .about-section ul li {
-            margin-bottom: 10px;
+        .about-section img:hover {
+            transform: scale(1.05);
         }
 
         .footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             width: 80%;
             max-width: 1200px;
             margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth Scrolling Animation for Links */
+        a[href^="#"] {
+            transition: all 0.3s ease;
+        }
+
+        a[href^="#"]:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-section:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .about-section-content {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
+            .about-section img {
+                max-width: 50%;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo">
+            <a href="#top" class="logo">
                 <img src="pokemonlogo.png" alt="Pokémon GO Logo">
                 <span>Webstore</span>
-            </div>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#about-niantic">About Niantic</a></li>
+                    <li><a href="#about-nintendo">About Nintendo</a></li>
+                    <li><a href="#about-webstore">About Pokémon GO Webstore</a></li>
                     <li><a href="#">Register</a></li>
                     <li><a href="#">Log In</a></li>
                 </ul>
@@ -148,26 +227,31 @@
     </header>
     <main>
         <div class="about-container">
-            <div class="about-section">
-                <h2>About Pokémon GO</h2>
-                <p>Pokémon GO is an augmented reality (AR) mobile game developed by Niantic in collaboration with Nintendo and The Pokémon Company. Launched in July 2016, the game uses mobile devices with GPS to locate, capture, train, and battle virtual creatures, called Pokémon, which appear as if they are in the player's real-world location.</p>
-                <p>Since its release, Pokémon GO has become a global phenomenon, encouraging players to explore their surroundings, connect with other players, and engage in various in-game events and activities.</p>
+            <!-- Niantic Section -->
+            <div class="about-section" id="about-niantic">
+                <div class="about-section-content">
+                    <h2>About Niantic</h2>
+                    <p>Niantic, Inc. is a leading augmented reality (AR) technology company known for creating engaging mobile games. The company's vision is to create technology that encourages real-world exploration and social interaction. Niantic's platform enables developers to build immersive, location-based AR experiences, making the real world a place of play, exploration, and connection.</p>
+                </div>
+                <img src="nianticlogo.png" alt="Niantic Logo">
             </div>
 
-            <div class="about-section">
-                <h2>About Our Webstore</h2>
-                <p>Welcome to the official Pokémon GO Webstore! Our mission is to provide players with exclusive in-game items, event tickets, and special offers that enhance the Pokémon GO experience. Whether you're looking for PokéCoins, event tickets, or limited-time bundles, our store has it all.</p>
-                <p>We strive to bring the best deals and unique items to our players, making it easier to stay ahead in the game while enjoying the excitement of discovering and collecting Pokémon.</p>
+            <!-- Nintendo Section -->
+            <div class="about-section" id="about-nintendo">
+                <div class="about-section-content">
+                    <h2>About Nintendo</h2>
+                    <p>Nintendo Co., Ltd. is a world-renowned gaming company known for creating beloved franchises like Pokémon, Mario, and Zelda. Nintendo has a long history of innovation in the gaming industry, providing unique gaming experiences across various platforms. As a collaborator in the Pokémon GO project, Nintendo continues to bring its rich heritage of fun and adventure to players worldwide.</p>
+                </div>
+                <img src="nintendologo.png" alt="Nintendo Logo">
             </div>
 
-            <div class="about-section">
-                <h2>Why Shop With Us?</h2>
-                <ul>
-                    <li><strong>Exclusive Offers:</strong> Access special offers and limited-time items only available through our webstore.</li>
-                    <li><strong>Secure Transactions:</strong> Enjoy peace of mind with our secure payment options.</li>
-                    <li><strong>Convenient Access:</strong> Purchase items anytime, anywhere, with easy-to-navigate webstore features.</li>
-                    <li><strong>Customer Support:</strong> Our dedicated support team is here to assist you with any questions or issues you may have.</li>
-                </ul>
+            <!-- Pokémon GO Webstore Section -->
+            <div class="about-section" id="about-webstore">
+                <div class="about-section-content">
+                    <h2>About Pokémon GO Webstore</h2>
+                    <p>The Pokémon GO Webstore is your one-stop-shop for all things related to Pokémon GO. Our mission is to provide players with exclusive in-game items, event tickets, and special offers that enhance their Pokémon GO experience. Whether you're looking to buy PokéCoins, event tickets, or limited-time bundles, our store offers everything you need to stay ahead in the game and enjoy your journey of discovering and collecting Pokémon.</p>
+                </div>
+                <img src="pokemonlogo.png" alt="Pokémon GO Webstore Logo" class="large-logo">
             </div>
         </div>
     </main>
@@ -176,5 +260,17 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 800);
+            }
+        });
+    </script>
 </body>
 </html>
