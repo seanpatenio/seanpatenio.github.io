@@ -10,16 +10,14 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Pok%C3%A9mon_GO_logo.svg/2560px-Pok%C3%A9mon_GO_logo.svg.png" alt="Pokémon Go Logo">
+                <img src="/Project/images (products)/logo.png" alt="Pokémon Go Logo">
                 <span>Webstore</span>
             </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="MAIN-PRODUCT-PAGE.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Log In</a></li>
+                <ul class="header-links">
+                    <li><a href="/Project/index.html">Home</a></li>
+                    <li><a href="/Project/index.html#productpage">Products</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,7 +25,7 @@
     <main>
     </div>
     <div class="product-details-container" id="5200-coins">
-        <img src="images/largecoins.png" alt="5200 PokéCoins">
+        <img src="/Project/images (products)/largecoins.png" alt="5200 PokéCoins">
         <h3>5,200 PokéCoins</h3>
         <div class="product-item">
             <p>+400 WEB STORE BONUS COINS!</p>
@@ -36,5 +34,15 @@
         <a href="CART.html" button class="add-to-cart">Add to Cart</button>
     </div>
     </main>
+    <script>
+        function toggleMenu() {
+            var links = document.getElementsByClassName('header-links')[0];
+            if (links.classList.contains('show')) {
+                links.classList.remove('show');
+            } else {
+                links.classList.add('show');
+            }
+        }
+    </script>
 </body>
 </html>
