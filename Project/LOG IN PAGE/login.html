@@ -1,52 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Login Page</title>
+    <link rel="stylesheet" href="/Project/LOG IN PAGE/login.css">
 </head>
 <body>
-  <div class="container">
+    <div class="main">
+        <div class="header">
+            <div class="logo">
+                <img src="/Project/images/pg logo.png" alt="">
+                Webstore
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="header-links">
+                <a href="../HOMEPAGE/index.html">Home</a>
+            </div>
+        </div>
+        <form id="myForm" class="form">
+            <h1>Log In</h1>
+            <div class="form-items">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-items">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+            </div>
+            <div class="rememberNforgot">
+                <div class="rememberdiv">
+                    <input type="checkbox" id="rememberme">
+                    Remember Me
+                </div>
+                <div class="forgot">
+                    Forgot Password
+                </div>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+            <div class="noacc">
+                <p>or</p>
+                <div class="socials">
+                    <img src="/Project/images/facebook (2).png" alt="">
+                    <img src="/Project/images/instagram (1).png" alt="">
+                    <img src="/Project/images/social-media.png" alt="">
+                </div>
+                <div class="noaccdiv">
+                    Don't Have an Account? 
+                    <a id="register-link" href="/Project/REGISTER PAGE/register.html">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
     
-    <form id="loginForm">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit">Login</button>
+    <script>
 
-    <a href="https://www.google.com" target="_blank" style="display:inline-block;  padding:10px 20px; text-decoration:none; border-radius:5px; font-family:Arial, sans-serif; font-size:16px;">Google</a>
-    <a href="https://www.facebook.com" target="_blank" style="display:inline-block;  padding:10px 20px; text-decoration:none; border-radius:5px; font-family:Arial, sans-serif; font-size:16px;"> Facebook</a>
+        function toggleMenu() {
+                    var links = document.querySelector('.header-links');
+                    links.classList.toggle('show');
+        }
 
-    </form>
-    <p id="error-msg"></p>
-  </div>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault(); 
 
-  <script>
-    
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-        
+                let email = document.getElementById("email").value;
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let cpassword = document.getElementById("cpassword").value;
+
+                if (email === "") {
+                    alert("Please enter your email.");
+                    return false; 
+                }
+
+                if (!isValidEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return false; 
+                }
+
+                if (username === "") {
+                    alert("Please enter a username.");
+                    return false; 
+                }
+
+                if (password === "") {
+                    alert("Please enter a password.");
+                    return false; 
+                }
+
+                if (password.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                    return false; 
+                }
+
+                if (password !== cpassword) {
+                    alert("Passwords do not match.");
+                    return false; 
+                }
+
+                
+                alert("Account Created Successfully");
+
+                
+                window.location.href = "login.html"; 
+            });
+
             
-            if (email === "user@example.com" && password === "password") {
-            
-            alert("Login successful!");
-            
-            window.location.href = "dashboard.html";
-            } else {
-            
-            document.getElementById("error-msg").textContent = "Invalid email or password. Please try again.";
+            function isValidEmail(email) {
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
             }
         });
-  
-  </script>
+
+    </script>
 </body>
 </html>
