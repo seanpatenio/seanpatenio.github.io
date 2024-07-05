@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -154,6 +154,7 @@ h1 {
     background-color: #e6b804;
 }
 
+
 @media (max-width: 600px) {
     .menu-icon {
         display: block;
@@ -195,7 +196,7 @@ h1 {
     }
 
     .cart-items-container {
-        width: 95%;
+        width: 95%; 
         padding: 15px;
     }
 }
@@ -217,7 +218,7 @@ h1 {
     }
 
     .cart-items-container {
-        width: 90%;
+        width: 90%; 
         margin: 20px;
     }
 }
@@ -231,7 +232,7 @@ h1 {
     }
 
     .cart-items-container {
-        width: 80%;
+        width: 80%; 
         margin: 20px;
     }
 }
