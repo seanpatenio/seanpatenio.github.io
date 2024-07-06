@@ -108,7 +108,7 @@ html {
     }
 
     .about {
-        background-image: url(/Project/images/pokemon\ wallpaper.jpg);
+        background-image: url(/project/images/pokemon\ wallpaper.jpg);
         object-fit: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
