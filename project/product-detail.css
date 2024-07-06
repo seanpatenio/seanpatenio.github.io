@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    color: white; 
 }
 
 header {
@@ -36,7 +37,6 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    flex: 1;
 }
 
 .logo img {
@@ -47,7 +47,7 @@ header {
 .logo span {
     font-size: 1em;
     font-weight: bold;
-    color: white;
+    color: white; 
 }
 
 nav {
@@ -68,17 +68,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: white; 
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.1em;
 }
 
 .menu-icon {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: white; 
 }
 
 .product-details-container {
@@ -94,6 +94,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white; 
 }
 
 .product-details-container img {
@@ -132,7 +133,6 @@ nav ul li a {
 
 .product-details-container .price {
     font-weight: bold;
-    color: #333;
     font-size: 1.5em;
     margin-bottom: 20px;
 }
@@ -188,7 +188,7 @@ nav ul li a {
     .header-links li a {
         font-size: 18px;
         font-weight: bold;
-        color: white;
+        color: white; 
         text-decoration: none;
     }
 
@@ -224,7 +224,7 @@ nav ul li a {
     .header-links a {
         text-align: center;
         padding: 15px;
-        font-size: 15px;
+        font-size: 10px;
         font-weight: bold;
         margin-right: 25px;
         border-radius: 20px;
@@ -267,7 +267,7 @@ nav ul li a {
     .header-links a {
         text-align: center;
         padding: 15px;
-        font-size: 18px;
+        font-size: 12px;
         font-weight: bold;
     }
 
