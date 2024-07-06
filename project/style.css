@@ -31,7 +31,7 @@ html {
 }
 
 .modal-content {
-    background-image: url(/Project/images/pika.jpg);
+    background-image: url(/project/images/pika.jpg);
     object-fit: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -97,7 +97,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(/Project/images/pg\ bg.jpeg);
+        background-image: url(/project/images/pg\ bg.jpeg);
         object-fit: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
