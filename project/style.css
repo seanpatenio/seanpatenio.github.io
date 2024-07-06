@@ -691,10 +691,10 @@ footer {
     background-size: cover;
 }
 
-.social-icon.youtube { background-image: url('path/to/youtube-icon.png'); }
-.social-icon.facebook { background-image: url('path/to/facebook-icon.png'); }
-.social-icon.instagram { background-image: url('path/to/instagram-icon.png'); }
-.social-icon.tiktok { background-image: url('path/to/tiktok-icon.png'); }
+.social-icon.youtube { background-image: url('/project/images/youtube.png'); }
+.social-icon.facebook { background-image: url('/project/images/fb.png'); }
+.social-icon.instagram { background-image: url('/project/images/insta.png'); }
+.social-icon.tiktok { background-image: url('/project/images/tiktok.png'); }
 
 .footer-links {
     margin: 20px 0;
