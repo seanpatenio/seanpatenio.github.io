@@ -593,15 +593,12 @@ html {
     }
 }
 
-
-
 @media (max-width: 400px) {
     
     .title {
         font-size: smaller;
     }
 }
-
 
 @media (max-width: 480px) {
 
