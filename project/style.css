@@ -12,8 +12,21 @@ html {
     max-width: 800px;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+    width: 80%;
+}
+
+.title h4 {
+    line-height: 30px;
 }
 
 .modal {
@@ -130,6 +143,7 @@ html {
         padding: 10px 20px;
         border-radius: 40px;
         width: 80%;
+        z-index: 9999;
     }
 
     .header .logo {
@@ -303,6 +317,10 @@ html {
         font-weight: bold;
     }
 
+    .title {
+        margin-top: 10px;
+    }
+
     .title h1 {
         font-size: 50px;
         margin-bottom: 30px;
@@ -312,8 +330,9 @@ html {
         margin-top: 30px;
         font-weight: 400;
         font-size: 30px;
+        line-height: 40px;
     }
-
+    
     .carousel-container {
         display: flex;
         flex-direction: column;
@@ -574,15 +593,12 @@ html {
     }
 }
 
-
-
 @media (max-width: 400px) {
     
     .title {
-        margin-top: 100px;
+        font-size: smaller;
     }
 }
-
 
 @media (max-width: 480px) {
 
@@ -653,4 +669,93 @@ html {
 .carousel-next::before {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #000000;
+}
+
+footer {
+    background-color: #377f86;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.social-media-icons {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    background-size: cover;
+}
+
+.social-icon.youtube { background-image: url('/project/images/youtube.png'); }
+.social-icon.facebook { background-image: url('/project/images/fb.png'); }
+.social-icon.instagram { background-image: url('/project/images/insta.png'); }
+.social-icon.tiktok { background-image: url('/project/images/tiktok.png'); }
+
+.footer-links {
+    margin: 20px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px 0; /* Adjust padding to create a gap */
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 70%;
+    margin: 0 auto; /* Center the text block */
+}
+
+.footer-text p {
+    margin: 10px 0; /* Add margin between paragraphs */
+}
+
+@media (max-width: 768px) {
+    .social-media-icons {
+        margin-bottom: 20px;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    .footer-link {
+        margin: 10px 0;
+    }
+    
+    .footer-text {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-text {
+        font-size: 10px;
+        line-height: 1.3;
+    }
 }

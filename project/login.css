@@ -137,8 +137,14 @@ body {
     }
 
     .rememberNforgot .rememberdiv {
+        display: flex;
+        align-items: center;
         margin-right: 24px;
         font-weight: 300;
+    }
+
+    .rememberdiv input {
+        margin-right: 5px;
     }
 
     .noacc a {
