@@ -153,13 +153,18 @@ nav ul li a {
 }
 
 @media (max-width: 600px) {
-    .nav-container {
-        flex-direction: column;
-    }
-
     .menu-icon {
         display: block;
-        align-self: flex-end;
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
     }
 
     .header-links {
@@ -271,34 +276,6 @@ nav ul li a {
 @media (min-width: 1001px) {
     .header-links a {
         text-align: center;
-        padding: 15px;
-        font-size: 12px;
-        font-weight: bold;
+        padding:
     }
-
-    .product-details-container {
-        width: 80%;
-        margin: 20px auto; 
-    }
-
-    .product-details-container img {
-        max-height: 200px;
-    }
-
-    .product-details-container h3 {
-        font-size: 2em;
-    }
-
-    .product-item img {
-        width: 50px;
-    }
-
-    .product-details-container .price {
-        font-size: 1.5em;
-    }
-
-    .product-details-container .add-to-cart {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-}
+}    
