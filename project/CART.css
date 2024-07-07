@@ -143,11 +143,10 @@ h1 {
 
 .checkout-button {
     background-color: #ffcb05;
-    color: white;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
-    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
