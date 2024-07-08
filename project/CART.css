@@ -11,6 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    color: white; 
 }
 
 header {
@@ -24,7 +25,7 @@ header {
 
 .nav-container {
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -47,14 +48,14 @@ header {
 .logo span {
     font-size: 1em;
     font-weight: bold;
-    color: #333;
+    color: white; 
 }
 
 .menu-icon {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: #333;
+    color: white; 
 }
 
 nav ul {
@@ -69,7 +70,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: white; 
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -100,6 +101,7 @@ h1 {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    color: white; 
 }
 
 .cart-item {
@@ -108,6 +110,7 @@ h1 {
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
+    color: white; 
 }
 
 .cart-item img {
@@ -123,26 +126,28 @@ h1 {
 
 .cart-item-title {
     font-weight: bold;
-    color: #333;
+    color: white; 
 }
 
 .cart-item-price {
     font-weight: bold;
-    color: #333;
+    color: white; 
 }
 
 .cart-total {
     font-size: 1.2em;
     margin-top: 20px;
     text-align: center;
+    color: white; 
 }
 
-.checkout-button {
+.add-to-cart-button {
     background-color: #ffcb05;
-    color: #000000;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
@@ -152,13 +157,18 @@ h1 {
     text-align: center;
 }
 
-.checkout-button:hover {
+.add-to-cart-button:hover {
     background-color: #e6b804;
 }
 
 @media (max-width: 600px) {
     .menu-icon {
         display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        margin-left: auto; 
+        margin-right: -5px; 
     }
 
     .header-links {
@@ -192,7 +202,7 @@ h1 {
     .header-links li a {
         font-size: 18px;
         font-weight: bold;
-        color: #333;
+        color: white; 
         text-decoration: none;
     }
 

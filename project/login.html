@@ -64,20 +64,8 @@
             document.getElementById("myForm").addEventListener("submit", function(event) {
                 event.preventDefault(); 
 
-                let email = document.getElementById("email").value;
                 let username = document.getElementById("username").value;
                 let password = document.getElementById("password").value;
-                let cpassword = document.getElementById("cpassword").value;
-
-                if (email === "") {
-                    alert("Please enter your email.");
-                    return false; 
-                }
-
-                if (!isValidEmail(email)) {
-                    alert("Please enter a valid email address.");
-                    return false; 
-                }
 
                 if (username === "") {
                     alert("Please enter a username.");
@@ -94,23 +82,12 @@
                     return false; 
                 }
 
-                if (password !== cpassword) {
-                    alert("Passwords do not match.");
-                    return false; 
-                }
+                
+                alert("Logged In");
 
                 
-                alert("Account Created Successfully");
-
-                
-                window.location.href = "login.html"; 
+                window.location.href = "index.html"; 
             });
-
-            
-            function isValidEmail(email) {
-                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                return emailPattern.test(email);
-            }
         });
 
     </script>

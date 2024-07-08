@@ -23,12 +23,15 @@
             <div class="content">
                 <div class="form-container">
                     <h2>Register</h2>
-                    <form id="registrationForm" onsubmit="return validateForm()">
+                    <form id="registrationForm" onsubmit="return validateForm(event)">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" required>
 
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
+
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
 
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required>
@@ -63,7 +66,6 @@
                             <button type="submit" class="register">Register</button>
                         </div>
                     </form>
-                    <div class="hover-message" id="hoverMessage">This is a required field.</div>
                 </div>
                 <hr>
                 <div class="social-buttons">
@@ -81,27 +83,53 @@
             var links = document.querySelector('.header-links');
             links.classList.toggle('show');
         }
-
-        function validateForm() {
+    
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
             var form = document.getElementById('registrationForm');
-            var hoverMessage = document.getElementById('hoverMessage');
+            var password = form.password.value;
+            var confirmPassword = form.confirmPassword.value;
+    
+            // Check password match
+            if (password !== confirmPassword) {
+                form.confirmPassword.setCustomValidity("Passwords need to match.");
+                form.confirmPassword.reportValidity();
+                return false; // Stop form submission
+            } else {
+                form.confirmPassword.setCustomValidity(""); // Clear the custom error message
+            }
+    
+            // Check other required fields
             var isValid = true;
-
             form.querySelectorAll('[required]').forEach(function(input) {
                 if (!input.value || (input.type === 'checkbox' && !input.checked)) {
+                    input.setCustomValidity("This is a required field.");
+                    input.reportValidity();
                     isValid = false;
+                } else {
+                    input.setCustomValidity(""); // Clear custom validity if field is filled
                 }
             });
-
-            if (!isValid) {
-                hoverMessage.style.display = 'block';
-                setTimeout(function() {
-                    hoverMessage.style.display = 'none';
-                }, 3000);
+    
+            if (isValid) {
+                console.log('Form is valid');
+                window.location.href = "/project/index.html"; // Redirect to index.html
+            } else {
+                console.log('Form is not valid');
             }
-
+    
             return isValid;
         }
+    
+        document.getElementById('password').addEventListener('input', function() {
+            this.setCustomValidity('');
+        });
+    
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            this.setCustomValidity('');
+        });
     </script>
+    
 </body>
 </html>
